@@ -18,6 +18,13 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //check if player exists
+        // = that means assigning smt == it means comparasion
+        if (target == null)
+        {
+            enabled = false;
+            return;
+        }
         //- is backwards + is forward
         Vector3 targetPosition = target.position - offset;
         //this is where the camera should go
