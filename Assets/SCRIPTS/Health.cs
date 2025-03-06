@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class Health : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class Health : MonoBehaviour
         if (points < 1)
         {
             //do not destroy, move the player to the start and reset points to 5
-            Destroy(gameObject);
+            direction = CompareTag("Player").(PostLateUpdate.ResetInputAxis);
         }
     }
 

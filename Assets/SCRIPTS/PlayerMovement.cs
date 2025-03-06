@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public string hero = "Redd";
 
     public bool isAlive = true;
+    public struct Tag(Player) = PlayerStartPosition;
 
 //xyz coordinates
     public Vector3 direction;
