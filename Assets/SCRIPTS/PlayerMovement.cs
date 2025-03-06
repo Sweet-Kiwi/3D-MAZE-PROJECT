@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
 //xyz coordinates
     public Vector3 direction;
-
+public Rigidbody playerRb;
     // always end in ;
     // do "" for name
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -27,8 +27,9 @@ public class PlayerMovement : MonoBehaviour
     {
         // the '.' is there to access the functionality of transform
         // ',' to seperate
-        transform.Translate(direction * Time.deltaTime *speed);
-
+        //transform.Translate(direction * Time.deltaTime *speed);
+// Rigedbody is the proper way to connect physics to the player movement
+        playerRb.linearVelocity = direction*speed;
     }
 
 //'{}' to define the function
