@@ -4,6 +4,7 @@ using UnityEngine.Rendering.Universal;
 
 public class PlayerCollection : MonoBehaviour
 {
+    //ADD A SCORING SYSTEM HERE (HW)
     //only destroy if collectable
     private void OnTriggerEnter(Collider other)
     {
@@ -12,4 +13,5 @@ public class PlayerCollection : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+    
 }

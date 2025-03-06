@@ -1,28 +1,44 @@
-using System;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
-
+using TMPro;
 public class Health : MonoBehaviour
 {
     public int points = 5;
+    public Vector3 respawnPosition;
+    public TMP_Text healthText;
 
-//OTE = OnTriggerEnter
+    private void Start()
+    {
+        respawnPosition = transform.position;
+    }
+
+    //OTE = OnTriggerEnter
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Trap"))
         {
             Damage(1);
         }
+        if (other.CompareTag("CheckPoint"))
+        {
+            respawnPosition = other.transform.position;
+            respawnPosition.y = transform.position.y;
+        }
     }
 
     //to remove some health points
     private void Damage(int value)
     {
+        
         points = points - value;
-        if (points < 1)
-        {
+        //$ = helps interpolate the point
+        healthText.text = $"<b>Health:</b> {points}";
+        
             //do not destroy, move the player to the start and reset points to 5
-            direction = CompareTag("Player").(PostLateUpdate.ResetInputAxis);
+            transform.position = respawnPosition;
+           // points = 5;
+            if (points < 1)
+        {
+           Destroy(gameObject);
         }
     }
 
