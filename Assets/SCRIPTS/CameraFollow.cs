@@ -7,7 +7,6 @@ public class CameraFollow : MonoBehaviour
     public float transitionSpeed = 10;
     private Vector3 offset;
     
-    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

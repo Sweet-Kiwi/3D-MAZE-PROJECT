@@ -4,12 +4,10 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     //we put information in the start of a class
-    int health = 100;
     public float speed = 4.5f;
+    public float jumpForce = 5f;
     public string hero = "Redd";
-
-    public bool isAlive = true;
-
+    
 //xyz coordinates
     public Vector3 direction;
 public Rigidbody playerRb;
@@ -23,13 +21,16 @@ public Rigidbody playerRb;
     }
 
     // Update is called once per frame
-    void Update()
+    //physics loop
+    void FixedUpdate()
     {
         // the '.' is there to access the functionality of transform
         // ',' to seperate
         //transform.Translate(direction * Time.deltaTime *speed);
 // Rigedbody is the proper way to connect physics to the player movement
-        playerRb.linearVelocity = direction*speed;
+Vector3 velocity = direction * speed;
+velocity.y = playerRb.linearVelocity.y;
+        playerRb.linearVelocity = velocity;
     }
 
 //'{}' to define the function
@@ -39,5 +40,17 @@ public Rigidbody playerRb;
         Vector2 inputValue = value.Get<Vector2>();
         direction = new Vector3(inputValue.x, 0, inputValue.y);
 
+    }
+
+    private void OnJump(InputValue value)
+    {
+        //physics.raycast will cast a line that will hit other colliders,
+        //if it finds another colider
+        //is returns true if not it returns fals
+        bool isGrounded =Physics.Raycast(transform.position, Vector3.down, 0.6f);
+        if (isGrounded)
+        { 
+            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
     }
 }
