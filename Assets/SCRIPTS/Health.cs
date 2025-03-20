@@ -36,7 +36,6 @@ public class Health : MonoBehaviour
     //to remove some health points
     private void Damage(int value)
     {
-        
         points = points - value;
         //$ = helps interpolate the point
         healthText.text = $"<b>Health:</b> {points}";
