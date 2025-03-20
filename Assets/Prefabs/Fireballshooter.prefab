@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &524523961279104270
+--- !u!1 &2278697036833976106
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4299004311000938775}
-  - component: {fileID: 8156188341015032200}
-  - component: {fileID: 4698541121936004785}
-  - component: {fileID: 5952158262720120269}
-  - component: {fileID: -8087955188394515105}
+  - component: {fileID: 5091467592872001314}
+  - component: {fileID: 2956340565157569057}
+  - component: {fileID: 2870779376655073301}
+  - component: {fileID: 2296253517108202968}
+  - component: {fileID: 9134563705971396910}
   m_Layer: 0
-  m_Name: COLLECTABLE
-  m_TagString: Collectable
+  m_Name: Fireballshooter
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4299004311000938775
+--- !u!4 &5091467592872001314
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 524523961279104270}
+  m_GameObject: {fileID: 2278697036833976106}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.46193978, y: 0.19134173, z: 0.19134173, w: 0.84462327}
-  m_LocalPosition: {x: -2.14, y: 1.06, z: -1.97}
-  m_LocalScale: {x: 0.47475845, y: -0.27155063, z: 0.44738027}
+  m_LocalRotation: {x: -0, y: 0.70544124, z: -0, w: 0.70876855}
+  m_LocalPosition: {x: -3.16, y: 0.89, z: -2.84}
+  m_LocalScale: {x: 1, y: 1, z: 0.07958534}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 45, y: 45, z: 45}
---- !u!33 &8156188341015032200
+  m_LocalEulerAnglesHint: {x: 0, y: 89.73, z: 0}
+--- !u!33 &2956340565157569057
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 524523961279104270}
+  m_GameObject: {fileID: 2278697036833976106}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &4698541121936004785
+--- !u!23 &2870779376655073301
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 524523961279104270}
+  m_GameObject: {fileID: 2278697036833976106}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5579dc43a27c8714b80bae5d809c0059, type: 2}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88,13 +88,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5952158262720120269
+--- !u!65 &2296253517108202968
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 524523961279104270}
+  m_GameObject: {fileID: 2278697036833976106}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -103,22 +103,23 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-8087955188394515105
+--- !u!114 &9134563705971396910
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 524523961279104270}
+  m_GameObject: {fileID: 2278697036833976106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8b340b3770b353429bd50ec5fc18136, type: 3}
+  m_Script: {fileID: 11500000, guid: 49ba84e1d9356194eba43adeebf28f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 45
+  fireballPrefab: {fileID: 2887932938955610452, guid: d6a1b4f911d9deb4da31cee3371103b7, type: 3}
+  spawnTimer: 1
